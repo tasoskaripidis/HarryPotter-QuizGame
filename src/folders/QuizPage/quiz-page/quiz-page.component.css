@@ -25,6 +25,8 @@ main p {
   text-align: center;
   font-size: 0.6rem;
   animation: question 0.5s ease-in-out;
+  width: 320px;
+  margin-left: 5.5rem;
 }
 
 main ul {

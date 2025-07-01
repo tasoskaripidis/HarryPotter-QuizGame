@@ -46,15 +46,15 @@ export class QuizPageComponent implements OnInit {
       this.selectedAnswer = null;
       if (this.quizIndex >= this.theQuiz.length) {
         if (this.score <= 5) {
-          alert('you are not a real fun');
+          alert('you are not a real fun,your score is not good');
           this.route.navigateByUrl('');
         }
         if (this.score >= 6 && this.score <= 10) {
-          alert('you are on a good way');
+          alert('you are on a good way,try more');
           this.route.navigateByUrl('');
         }
         if (this.score >= 11 && this.score <= 15) {
-          alert('you are not a big fun');
+          alert('you are a big fun!!Your score is good');
           this.route.navigateByUrl('');
         }
       }
