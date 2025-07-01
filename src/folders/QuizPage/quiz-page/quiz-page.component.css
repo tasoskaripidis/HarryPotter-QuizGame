@@ -102,9 +102,26 @@ main li:nth-child(4) {
   }
 }
 
-@media screen and (max-width: 822px) {
+@media screen and (max-width: 854px) {
   main p {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+  main {
+    height: 1200px;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  main p {
+    font-size: 0.8rem;
+  }
+  main {
+    height: 1200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main p {
+    font-size: 0.8rem;
   }
   main {
     height: 1200px;
