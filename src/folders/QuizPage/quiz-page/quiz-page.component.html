@@ -1,0 +1,57 @@
+@if(quizGame){
+<div class="quiz-container">
+  <main>
+    <h2>{{ quizGame.id }}/15</h2>
+    @if(!answersAnimation){ @if(istrue){
+    <p class="question">{{ quizGame.question }}</p>
+    }
+
+    <ul>
+      <li
+        class="list1"
+        (click)="theAnswer(quizGame.answers.answerOne.iscorrect, 'answerOne')"
+        [class]="{
+          correct: selectedKey === 'answerOne' && selectedAnswer,
+          wrong: selectedKey === 'answerOne' && selectedAnswer === false
+        }"
+      >
+        {{ quizGame.answers.answerOne.text }}
+      </li>
+      <li
+        class="list2"
+        (click)="theAnswer(quizGame.answers.answerTwo.iscorrect, 'answerTwo')"
+        [class]="{
+          correct: selectedKey === 'answerTwo' && selectedAnswer,
+          wrong: selectedKey === 'answerTwo' && selectedAnswer === false
+        }"
+      >
+        {{ quizGame.answers.answerTwo.text }}
+      </li>
+      <li
+        class="list3"
+        (click)="
+          theAnswer(quizGame.answers.answerTree.iscorrect, 'answerThree')
+        "
+        [class]="{
+          correct: selectedKey === 'answerThree' && selectedAnswer,
+          wrong: selectedKey === 'answerThree' && selectedAnswer === false
+        }"
+      >
+        {{ quizGame.answers.answerTree.text }}
+      </li>
+      <li
+        class="list4"
+        (click)="theAnswer(quizGame.answers.answerFour.iscorrect, 'answerFour')"
+        [class]="{
+          correct: selectedKey === 'answerFour' && selectedAnswer,
+          wrong: selectedKey === 'answerFour' && selectedAnswer === false
+        }"
+      >
+        {{ quizGame.answers.answerFour.text }}
+      </li>
+    </ul>
+    }
+  </main>
+</div>
+
+}
